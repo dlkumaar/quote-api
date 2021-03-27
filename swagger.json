@@ -1,0 +1,55 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Quote API",
+		"description": "Quote serving JSON API"
+	},
+	"host": "localhost:5000",
+	"basePath": "/api",
+	"tags": [
+		{
+			"name": "Quotes",
+			"description": "API for quotes in the system"
+		}
+	],
+	"paths": {
+		"/quotes": {
+			"get": {
+				"tags": ["Get all quotes"],
+				"summary": "Get all quotes",
+				"description": "Get all quotes from the system",
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			},
+
+			"post": {
+				"tags": ["Post a new quote"],
+				"summary": "Post new quote",
+				"description": "Post a new quote",
+				"parameters": [{ "quote": "quote", "person": "person" }],
+				"type": "object",
+				"responses": {
+					"201": {
+						"description": "Success"
+					}
+				}
+			}
+		},
+		"/quotes/random": {
+			"get": {
+				"tags": ["Get a random quote"],
+				"summary": "Get a random quote",
+				"description": "Get a random quote from the system",
+				"responses": {
+					"200": {
+						"description": "Success"
+					}
+				}
+			}
+		}
+	}
+}

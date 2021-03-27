@@ -2,14 +2,16 @@
 	"name": "quoteapi",
 	"version": "1.0.0",
 	"description": "Quote serving JSON API",
-	"main": "app.js",
+	"main": "backend/app.js",
 	"scripts": {
-		"start": "nodemon server.js"
+		"start": "nodemon backend/app.js"
 	},
 	"author": "Rahul Kumar",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.17.1",
-		"morgan": "^1.10.0"
+		"morgan": "^1.10.0",
+		"swagger-jsdoc": "^6.1.0",
+		"swagger-ui-express": "^4.1.6"
 	}
 }
